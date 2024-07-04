@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sedan SC", serif;
+    background-image: url('/static/css/images/about.jpg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),;
+    background-repeat: no-repeat;
+     
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  nav .logo {
+    width: 25%;
+    text-align: center;
+    /*background: red;*/
+  }
+  
+  nav .menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav .menu a {
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav .menu a:hover{
+    color: #00b894;
+  }
+
+.container{
+    text-align: center;
+    
+}
+
+.header{
+    padding-top: 60px;
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+}
+
+ 
+.teams-head img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.teams-head .name{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.teams-head .desig{
+    font-style: italic;
+    
+    color: #fff;
+}
+
+.teams-head .about{
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #fff;
+    text-align: justify;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+} 
+
+.sb-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 48px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams{
+    margin: 10px;
+    padding: 22px;
+    max-width: 22%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.teams:hover{
+    background: #333;
+    border-radius: 12px;
+}
+
+.teams img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.name{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.desig{
+    font-style: italic;
+    color: #fff;
+}
+
+.about{
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #fff;
+    text-align: justify;
+}
+
+.social{
+    margin: 14px;
+
+}
+
+.social a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+
+.social a:hover{
+    transform: scale(1.5);
+}
+
+.social a i{
+    color: blue;
+}
+
+@media (max-width:768px) {
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      nav .menu a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+      }
+    
+      .logo h1 {
+        font-size: 16px;
+      }
+
+    .teams{
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    nav .menu a {
+      font-size: 14px;
+    }
+  
+    .logo h1 {
+      font-size: 14px;
+    }
+  
+    .teams{
+        max-width: 100%;
+    }
+  }
+
+

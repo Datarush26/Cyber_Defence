@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sedan SC", serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image:url("/static/css/images/home1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow:auto;
+  
+}
+
+.logo h1 a{
+  color: #fff;
+}
+
+.menu a{
+  width: 100%;
+  padding: 10px;
+}
+
+#accordion{
+  margin: 80px auto;
+  width: 700px;
+  align-items: left;
+}
+
+
+#accordion li{
+ list-style: none;
+ width: 100%;
+ margin-bottom: 20px;
+ 
+ border-radius: 4px;
+}
+
+
+#accordion li label{
+ 
+  display:flex;
+  align-items: left;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color:white;
+}
+
+
+.form-box{
+  position: relative;
+  width: 550px;
+  height: 300px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.yolo{
+  margin-right: 600px;
+  margin-bottom: 100px
+}
+
+
+.form box content p{
+  text-align: left;
+  padding-right: 100px;
+  padding: 20px;
+  justify-content: center;
+  
+}
+
+
+#accordion li label span{
+  transform: rotate(90deg);
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 400px;
+}
+
+
+#accordion label + input[type ="checkbox"]{
+  display:none;
+}
+
+
+#accordion .content{
+  padding:0 10px;
+  line-height: 26px;
+  max-height:0 ;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+
+#accordion label + input[type ="checkbox"]:checked + .content{
+  max-height:400px;
+}
+
+.form-value p{
+  color: #fff;
+  text-align: justify;
+  padding-right: 20px; 
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.form-value a{
+  color: #fff;
+  font-weight: bold;
+}
+
+.high{
+  margin-right: 50px;
+  text-shadow: #000;
+  height: 600px;
+  text-size-adjust: 100px;
+}
+
+nav {
+  width: 100%;
+  height: 15vh;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+nav .logo {
+  width: 25%;
+  text-align: center;
+  /*background: red;*/
+}
+
+nav .menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .menu a {
+  width: 25%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav .menu a:hover{
+  color: #00b894;
+}
+
+main {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+section h3 {
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px black;
+}
+
+section h1 {
+  margin: 30px 0 20px 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 2px 1px 5px black;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 25px;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 1px black;
+}
+
+section a {
+  padding: 12px 30px;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+}
+
+section .btnone {
+  /*background: #00b894;*/
+  background: #fff;
+  color: #000;
+}
+
+.btnone:hover {
+  background: #00b894;
+  color: white;
+}
+
+section .btntwo {
+  background: #00b894;
+  color: white;
+}
+
+.btntwo:hover {
+  background: #fff;
+  color: #000;
+}
+
+.change_content:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: #00b894;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav .menu {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  nav .menu a {
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+  }
+  
+  nav .logo h1 {
+      font-size: 16px;
+  }
+
+  .teams {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .menu a {
+      font-size: 14px;
+  }
+
+  nav .logo h1 {
+      font-size: 14px;
+  }
+
+  .teams {
+      max-width: 100%;
+  }
+}

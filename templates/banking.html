@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/banking.css')}}">
+    <title>Banking Fraud Detection</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"> <h1 style="font-size: 20px; color: #fff"> <a href="/"> Fraud Detectors </a> </h1> </div>
+            <div class="menu">
+                <a href="/">Home</a>
+                <a href="/spam">Spam E-mail</a>
+                <a href="/phishing">Phishing Website</a>
+                <a href="creditcard">Credit Card Fraud</a>
+                <a href="/about">About us</a>
+            </div>
+    </nav>
+  <section>
+    <div class="Hello">
+        <ul id="accordion">
+            <li>
+                <label for="first">Follow the instructions below 👇🏻 </label>
+                    <input type ="checkbox" name="accordion" id="first" >
+                    <div class="content">
+                        <div class="form-box1"> 
+                            <p>
+                                Step 1: Enter the type of your transaction from the given options
+                            </p>
+                        </div>	
+                        <br/>
+                        <div class="form-box1"> 
+                            <p>
+                               Step 2: Enter the amount of your transaction
+                            </p>
+                        </div>	
+                        <br/>
+                        <div class="form-box1"> 
+                        <p>
+                           Step 3: Enter your balance before the transaction 
+                        </p>
+                        </div>	
+                        <br/>
+                        <div class="form-box1"> 
+                            <p>
+                               Step 4: Enter your balance after the transaction 
+                            </p>
+                        </div>	
+                       
+                    </div>                     
+            </li>
+       
+          </ul>
+      </div>
+
+      <div class="form-box">
+          <div class="form-value">
+            <form action="{{ url_for('creditcard')}}" method="post"">
+                  <h2>Banking Fraud Detector</h2>
+                  <div class="inputbox1">
+                    <label for="text">Type</label>
+                  </div>
+                  <select id="type" name="Type" required>
+                    <option></option>
+                    <option value="CASH_IN">CASH_IN</option>
+                    <option value="CASH_OUT">CASH_OUT</option>
+                    <option value="PAYMENT">PAYMENT</option>
+                    <option value="TRANSFER">TRANSFER</option>
+                    <option value="DEBIT">DEBIT</option>
+                  </select>
+                  <div class="inputbox">
+                    <ion-icon name="logo-usd"></ion-icon>
+                    <input type="text" name= "amount" required>
+                    <label for="text">Amount</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="logo-usd"></ion-icon>
+                    <input type="text" name="oldbalance" required>
+                    <label for="text">Old Balance origin</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="logo-usd"></ion-icon>
+                    <input type="text" name="newbalance" required>
+                    <label for="text">New Balance origin</label>
+                </div> 
+                  <button>Submit</button>   
+                  <h3 class="result">{{prediction}}</h3>          
+              </form>
+          </div>
+        </div>
+        
+  
+  
+</section>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

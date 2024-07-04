@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style3.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo"> <h1 style="font-size: 20px; color: #fff"> <a href="/"> Fraud Detectors </a> </h1> </div>
+				<div class="menu">
+					<a href="/">Home</a>
+					<a href="/spam">Spam E-mail</a>
+					<a href="/phishing">Phishing Website</a>
+					<a href="/creditcard">Credit Card Fraud</a>
+					<a href="/about">About us</a>
+				</div>
+		</nav>
+		<div class="yolo">
+			<ul id="accordion">
+				<li>
+					<label for="first">What is Spam Email? <span>&#x3e;</span></label>
+						<input type ="checkbox" name="accordion" id="first" >
+							<div class="content">
+								<div class="form-box">
+				   					<div class="form-value">	
+										<p>Spam email is unsolicited and often irrelevafnt or inappropriate messages sent over the internet to a large number of recipients. These emails are typically used for advertising, phishing scams, spreading malware, or other deceptive purposes. Spam emails clutter inboxes, waste time, and can pose security risks to recipients.<br/>
+											Example:
+											Subject: "Congratulations! You've won a $1,000 gift card!"
+											Content: "Click here to claim your prize now! Just provide your personal details and enjoy your reward."
+											This type of email is sent without the recipient's consent and often aims to trick them into providing sensitive information or clicking on malicious links.<br/>
+											To check:
+											<a href="/spam">Click here</a>
+										</p>
+									</div>
+								</div>	
+							</div>
+				</li>
+				<li>
+					<label for="second">What is Phishing website? <span>&#x3e;</span></label>
+					<input type ="checkbox" name="accordion" id="second">
+					<div class="content">
+						<div class="form-box">
+							<div class="form-value">	
+				 				<p>A phishing website is a fraudulent site designed to mimic a legitimate website with the intent of deceiving visitors into divulging sensitive information such as usernames, passwords, credit card numbers, or other personal details.<br/>
+									Example:
+									A phishing website might look almost identical to a bank's official website. It could have the same logo, layout, and design. However, when users enter their login credentials, this information is captured by the attackers instead of being securely transmitted to the bank.
+									Phishing Website Characteristics:
+									URL Differences: The web address may have slight variations from the legitimate site (e.g., www.bank-example.com vs. www.bank-exampple.com).<br/>
+									To check:
+									<a href="/phishing">Click here</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<label for="third">What is Banking fraud? <span>&#x3e;</span></label>
+					<input type ="checkbox" name="accordion" id="third">
+					<div class="content">
+						<div class="form-box">
+							<div class="form-value">
+								<p>Online banking fraud is a type of financial fraud that involves the use of online banking systems to illegally obtain money, personal information, or other assets from individuals or financial institutions. Fraudsters employ various deceptive tactics to exploit vulnerabilities in online banking platforms and trick users into divulging sensitive information or making unauthorized transactions.<br/>
+									To check:
+				   				<a href="/creditcard">Click here</a>
+								</p>
+							</div>
+		 				</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+</body>
+</html>
