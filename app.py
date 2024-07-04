@@ -23,8 +23,8 @@ def about():
 
 # Code for sms spam detection
 
-sd=pickle.load(open('sms_spam\Vectorizer.pkl','rb'))
-model=pickle.load(open('sms_spam\Logistic_regg.pkl' , 'rb'))
+sd=pickle.load(open('sms_spam/Vectorizer.pkl','rb'))
+model=pickle.load(open('sms_spam/Logistic_regg.pkl' , 'rb'))
 ps=PorterStemmer()
 def transform(text):
   if text is None:
@@ -150,9 +150,9 @@ def main(url):
 
 #Phising Page Code
 
-urlmodel=pickle.load(open("Phishing_website\Random_forestforPhising.pkl","rb"))
-urllabelencode=pickle.load(open("Phishing_website\Labelencoderfor_phising.pkl","rb"))
-urlscaling=pickle.load(open("Phishing_website\standardscalerfor_phising.pkl","rb"))
+urlmodel=pickle.load(open("Phishing_website/Random_forestforPhising.pkl","rb"))
+urllabelencode=pickle.load(open("Phishing_website/Labelencoderfor_phising.pkl","rb"))
+urlscaling=pickle.load(open("Phishing_website/standardscalerfor_phising.pkl","rb"))
 @app.route('/phishing',methods=['POST','GET'])
 def phishing():
     prediction=""
@@ -174,9 +174,9 @@ def phishing():
 
 # Code for credit card fraud detection
 
-creditcard_model=pickle.load(open("credit_card_fraud\Bankmodel.pkl",'rb'))
-creditcard_label=pickle.load(open("credit_card_fraud\encoder.pkl",'rb'))
-creditcard_scaling=pickle.load(open("credit_card_fraud\scaling.pkl",'rb'))
+creditcard_model=pickle.load(open("credit_card_fraud/Bankmodel.pkl",'rb'))
+creditcard_label=pickle.load(open("credit_card_fraud/encoder.pkl",'rb'))
+creditcard_scaling=pickle.load(open("credit_card_fraud/scaling.pkl",'rb'))
 @app.route('/creditcard',methods=['POST','GET'])
 def creditcard():
     prediction=""
